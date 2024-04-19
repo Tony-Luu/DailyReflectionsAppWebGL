@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
+
+    function UnityProgress(unityInstance, progress) {
+        //unityInstance.logo.style.display = unityInstance.progress.style.display = "none";
+        var unityContainer = document.getElementById('unityContainer');
+        var spinner = document.getElementById("twinkl-go-spinner");
+        spinner.style.width = unityContainer.style.width;
+        spinner.style.height = unityContainer.style.height;
+
+        if (progress == 1)
+            spinner.style.display = "none";
+    }
+    </script>
+    <style>
+        #twinkl-go-spinner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1280px;
+            height: 720px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="unityContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto"></div>
+    <div id="twinkl-go-spinner">
+<img src="assets/_preloader.gif">    </div>
+  </body>
+
+</html>
