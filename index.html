@@ -7,7 +7,7 @@
   </head>
   <body style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto">
     <canvas id="unity-canvas" width=1280 height=720 style="position: absolute; width: 100%; height: 100%; background: #231F20"></canvas>
-    <script src="Build/Daily Reflections App.loader.js"></script>
+    <script src="Build/Daily Reflections App WebGL Build.loader.js"></script>
     <div id="twinkl-go-spinner" style="position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: white">
       <img src="assets/_preloader.gif">    </div>
     <script>
@@ -27,9 +27,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Daily Reflections App.data.unityweb",
-        frameworkUrl: "Build/Daily Reflections App.framework.js.unityweb",
-        codeUrl: "Build/Daily Reflections App.wasm.unityweb",
+        dataUrl: "Build/Daily Reflections App WebGL Build.data.unityweb",
+        frameworkUrl: "Build/Daily Reflections App WebGL Build.framework.js.unityweb",
+        codeUrl: "Build/Daily Reflections App WebGL Build.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Twinkl",
         productName: "DailyReflections",
